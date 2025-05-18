@@ -18,7 +18,7 @@ class Mysql extends conexion
         //ejecutamos la consulta con los valores
         $stnt->execute($arrValues);
         //devolvemos el id insertado en la tabla 
-        $stns = $this->conexion->lastInsertId();
+        $stnt = $this->conexion->lastInsertId();
         //limpiamos la conexion 
         $this->conexion = null;
         return $stnt;
@@ -44,5 +44,39 @@ class Mysql extends conexion
     public function select_one(string $sql, array $arrValues = [])
     {
         //preparemos la consulta con la conexion
+        $stnt = $this->conexion->prepare($sql);
+        //ejecutamos la consulta con los valores
+        $stnt->execute($arrValues);
+        //seleccionamos un solo registro de la tabla en un fetch asociado
+        $stnt = $stnt->fetch(PDO::FETCH_ASSOC);
+        //limpiamos la conexion
+        $this->conexion = null;
+        return $stnt;
+    }
+    /**
+     * Metodo que actualiza la informacion de una tabla
+     */
+    public function update(string $sql, array $arrValues = [])
+    {
+        //preparamos la consulta con la conexion
+        $stnt = $this->conexion->prepare($sql);
+        //Ejecutamos la consulta con los valores 
+        $stnt->execute($arrValues);
+        //limpiamos la conexion
+        $this->conexion = null;
+        return $stnt;
+    }
+    /**
+     * Metoodo que elimina un registro de una tabla
+     */
+    public function delete(string $sql, array $arrValues = [])
+    {
+        //preparamos la consulta con la conexion
+        $stnt = $this->conexion->prepare($sql);
+        //ejecutamos la consulta con los valores
+        $stnt->execute($arrValues);
+        //limpiamos la conexion
+        $this->conexion = null;
+        return $stnt;
     }
 }
