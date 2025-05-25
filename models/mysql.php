@@ -3,7 +3,8 @@ require_once "./Helpers/helpers.php";
 class Mysql extends conexion
 {
     private $conexion;
-    public function __construct(){
+    public function __construct()
+    {
         parent::__construct();
         $this->conexion = $this->conexion();
     }
@@ -11,7 +12,7 @@ class Mysql extends conexion
      * Metodo que insertar datos en la base de datos 
      * 
      */
-    public function insertar(string $sql, array $arrValues =[])
+    public function insertar(string $sql, array $arrValues = [])
     {
         //Preparamos la consulta  con la conexion 
         $stnt = $this->conexion->prepare($sql);
