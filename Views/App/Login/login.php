@@ -14,10 +14,18 @@
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <!-- Inicio del card -->
         <div class="card text-center p-4 shadow" style="width: 100%; max-width: 400px;">
-            <h1 class="display-1 text-danger fw-bold">404</h1>
-            <h4 class="mb-3">Pagina no encontrada</h4>
-            <p class="text-muted mb-4">Lo sentimos, la pagina que buscas no existe o fue movida</p>
-            <a href="http://" class="btn btn-primary w-100">Regresar al inicio</a>
+            <h3 class="text-center">Iniciar Sesion</h3>
+            <form action="">
+                <div class="mb-3">
+                    <label for="">Usuario</label>
+                    <input type="text" class="form-control text-center" placeholder="Ingrese su usuario">
+                </div>
+                <div class="mb-3">
+                    <label for="">Contraseña</label>
+                    <input type="password" name="" id="" class="form-control text-center" placeholder="***********">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+            </form>
         </div>
         <!-- Fin del card -->
     </div>
