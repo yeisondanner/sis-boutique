@@ -13,7 +13,7 @@ class conexion extends helpers
         try{ 
             $conexion = new PDO( $dns,$usuario,$password);
             return $conexion;
-        }catch (PDOException se){
+        }catch (PDOException $e){
 
         }
 
