@@ -20,6 +20,16 @@ switch ($view) {
         $data["js"] = "login";
         require_once "./Views/App/Login/login.php";
         break;
+    case 'dashboard':
+        $data["id"] = 2;
+        $data["title"] = "Panel de control";
+        $data["description"] = "Gestion del sistema de boutique";
+        $data["container"] = "Dashboard";
+        $data["view"] = "dashboard";
+        $data["css"] = "dashboard";
+        $data["js"] = "dashboard";
+        require_once "./Views/App/Dashboard/dashboard.php";
+        break;
     default:
         require_once "./Views/App/404/404.php";
         break;
