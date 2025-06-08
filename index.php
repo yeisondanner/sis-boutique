@@ -28,7 +28,33 @@ switch ($view) {
         $data["view"] = "dashboard";
         $data["css"] = "dashboard";
         $data["js"] = "dashboard";
+        require_once "./Views/Template/start.php";
         require_once "./Views/App/Dashboard/dashboard.php";
+        require_once "./Views/Template/end.php";
+        break;
+    case 'products':
+        $data["id"] = 3;
+        $data["title"] = "Gestion de productos";
+        $data["description"] = "Este modulo te permite gestionar los productos";
+        $data["container"] = "Products";
+        $data["view"] = "products";
+        $data["css"] = "products";
+        $data["js"] = "products";
+        require_once "./Views/Template/start.php";
+        require_once "./Views/App/Products/products.php";
+        require_once "./Views/Template/end.php";
+        break;
+    case 'customers':
+        $data["id"] = 4;
+        $data["title"] = "Gestion de Clientes";
+        $data["description"] = "Este modulo te permite gestionar los Clientes";
+        $data["container"] = "Customers";
+        $data["view"] = "customers";
+        $data["css"] = "customers";
+        $data["js"] = "customers";
+        require_once "./Views/Template/start.php";
+        require_once "./Views/App/Customers/customers.php";
+        require_once "./Views/Template/end.php";
         break;
     default:
         require_once "./Views/App/404/404.php";
