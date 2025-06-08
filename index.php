@@ -30,7 +30,7 @@ switch ($view) {
         $data["js"] = "dashboard";
         require_once "./Views/Template/start.php";
         require_once "./Views/App/Dashboard/dashboard.php";
-       require_once "./Views/Template/end.php";
+        require_once "./Views/Template/end.php";
         break;
     default:
         require_once "./Views/App/404/404.php";
