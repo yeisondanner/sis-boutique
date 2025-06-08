@@ -16,8 +16,8 @@
                     </li>
                     <li class="nav-item w-100">
                         <a href="http://" class="nav-link text-white px-3">
-                            <i class="bi bi-speedometer2 me-2"></i>
-                            <span class="d-none d-sm-inline">Dashboard</span>
+                            <i class="bi bi-box me-2"></i>
+                            <span class="d-none d-sm-inline">Gestion de productos</span>
                         </a>
                     </li>
                     <li class="nav-item w-100">

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light rounded mb-4">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Dashboard</a>
+                        <a class="navbar-brand" href="#"><?= $data["title"] ?></a>
                         <button class="navbar-toggler"
                             type="button"
                             data-bs-toggle="collapse"
