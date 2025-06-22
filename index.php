@@ -1,4 +1,5 @@
 <?php
+require_once "./Config/config.php";
 //validamos que exista la variable get view
 if (!isset($_GET["view"])) {
     $_GET["view"] = "login";
