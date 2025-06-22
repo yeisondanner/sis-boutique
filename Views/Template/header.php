@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.bootstrap5.css">
     <!--css de la pagina-->
-    <link rel="stylesheet" href="<?= BASE_URL ?>/Views/App/<?= $data["container"] ?>/<?= $data["view"] ?>/<?= $data["css"] ?>.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>/Views/App/<?= $data["container"] ?>/libraries/css/<?= $data["css"] ?>.css">
 
 </head>
 

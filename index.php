@@ -37,15 +37,19 @@ switch ($view) {
         $data["id"] = 3;
         $data["title"] = "Gestion de productos";
         $data["description"] = "Gestion del sistema de boutique";
-        $data["container"] = "Dashboard";
-        $data["view"] = "dashboard";
-        $data["css"] = "dashboard";
-        $data["js"] = "dashboard";
+        $data["container"] = "Products";
+        $data["view"] = "products";
+        $data["css"] = "products";
+        $data["js"] = "products";
         require_once "./Views/Template/start.php";
         require_once "./Views/App/Products/products.php";
         require_once "./Views/Template/end.php";
         break;
     default:
+        $data["container"] = "404";
+        $data["view"] = "40";
+        $data["css"] = "404";
+        $data["js"] = "404";
         require_once "./Views/App/404/404.php";
         break;
 }
