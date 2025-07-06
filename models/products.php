@@ -70,6 +70,7 @@ class Products extends Mysql
             P_photo)
              VALUES 
              (?,?,?,?,?,?,?,?,?)";
+             );
         //creamos un arrvalues que va almacenar los valores de los campos
         $arrValues = array(
            //llamamos el metodo insert de la clase Mysql
