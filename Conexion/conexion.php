@@ -1,5 +1,5 @@
 <?php
-require_once "./Helpers/helpers.php";
+require_once "../Helpers/helpers.php";
 class Conexion extends  Helpers
 {
 

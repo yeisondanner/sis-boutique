@@ -1,11 +1,11 @@
 <?php
-require_once "./Conexion/conexion.php";
+require_once "../Conexion/conexion.php";
 class Mysql extends Conexion
 {
     private $conn;
     public function __construct()
     {
-        parent::__construct();
+
         $this->conn = $this->conexion();
     }
     /**

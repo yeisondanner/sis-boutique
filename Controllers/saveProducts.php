@@ -13,7 +13,7 @@ if (!isset($_POST)) {
     die();
 }
 //requerimos el modelo de los productos
-require_once "./Models/products.php";
+require_once "../Models/products.php";
 //obtenemos los inputs que se envian desde el formulario de productos, almacenados en variables
 $name = $_POST['txtName'];
 $description = $_POST['txtDescription'];
@@ -23,7 +23,7 @@ $priceBuy = $_POST['txtPriceBuy'];
 $priceSale = $_POST['txtPriceSale'];
 $stock = $_POST['txtStock'];
 $brand = $_POST['txtBrand'];
-$photo = $_FILES["txtPhoto"];
+$photo = $_FILES["txtPhoto"]["name"];
 //validamos que los campos no esten vacios
 if (
     empty($name) ||

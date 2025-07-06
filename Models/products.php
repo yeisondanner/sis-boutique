@@ -1,5 +1,5 @@
 <?php
-require_once "./mysql.php";
+require_once "../Models/mysql.php";
 class products extends Mysql
 {
     //encapsulamos las propiedades de manera privada
