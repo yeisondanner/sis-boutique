@@ -27,7 +27,15 @@ function save() {
             cache: "default",
         }
         //utilizamos una variable de ruta
-        const url = base_url;
+        const url = base_url + "/Controllers/saveProducts.php";
         //utilizamos el metodo fetch
+        fetch(url, config)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => {
+                alert("Ocurrio un error al guardar los datos " + error.getText());
+            });
     });
 }

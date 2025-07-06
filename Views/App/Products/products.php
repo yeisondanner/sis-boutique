@@ -18,8 +18,8 @@
                         <input type="text" class="form-control" id="txtName" name="txtName" required>
                     </div>
                     <div class="form-group">
-                        <label for="txtName">Descripción</label>
-                        <textarea name="txtName" id="txtName" class="form-control" rows="3"></textarea>
+                        <label for="txtDescription">Descripción</label>
+                        <textarea name="txtDescription" id="txtDescription" class="form-control" rows="3"></textarea>
                     </div>
                     <div class="row">
                         <div class="col-6">
