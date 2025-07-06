@@ -1,4 +1,5 @@
 <?php
+require_once "./Config/config.php";
 //validamos que exista la variable get view
 if (!isset($_GET["view"])) {
     $_GET["view"] = "login";
@@ -28,48 +29,27 @@ switch ($view) {
         $data["view"] = "dashboard";
         $data["css"] = "dashboard";
         $data["js"] = "dashboard";
-        require_once "./Views/template/start.php";
-        require_once "./Views/App/Dashboard/Dashboard.php";
-        require_once "./Views/template/end.php";
+        require_once "./Views/Template/start.php";
+        require_once "./Views/App/Dashboard/dashboard.php";
+        require_once "./Views/Template/end.php";
         break;
-    case "Products":
+    case 'products':
         $data["id"] = 3;
         $data["title"] = "Gestion de productos";
-        $data["description"] = "este modulo te permite gestionar los productos";
-        $data["container"] = "products";
+        $data["description"] = "Gestion del sistema de boutique";
+        $data["container"] = "Products";
         $data["view"] = "products";
         $data["css"] = "products";
         $data["js"] = "products";
-        require_once "./Views/template/start.php";
-        require_once "./Views/App/Products/Products.php";
-        require_once "./Views/template/end.php";
+        require_once "./Views/Template/start.php";
+        require_once "./Views/App/Products/products.php";
+        require_once "./Views/Template/end.php";
         break;
-        case "customer":
-            $data["id"] = 4;
-            $data["title"] = "Gestion de clientes";
-            $data["description"] = "este modulo te permite gestionar los clientes";
-            $data["container"] = "customer";
-            $data["view"] = "customer";
-            $data["css"] = "customer";
-            $data["js"] = "customer";
-            require_once "./Views/template/start.php";
-            require_once "./Views/App/Customer/Customer.php";
-            require_once "./Views/template/end.php";
-            break;
-    case "sales":
-        $data["id"] = 5;
-        $data["title"] = "Gestion de ventas";
-        $data["description"] = "este modulo te permite gestionar las ventas";
-        $data["container"] = "sales";
-        $data["view"] = "sales";
-        $data["css"] = "sales";
-        $data["js"] = "sales";
-        require_once "./Views/template/start.php";
-        require_once "./Views/App/sales/sales.php";
-        require_once "./Views/template/end.php";
-        break;
-
     default:
+        $data["container"] = "404";
+        $data["view"] = "40";
+        $data["css"] = "404";
+        $data["js"] = "404";
         require_once "./Views/App/404/404.php";
         break;
 }

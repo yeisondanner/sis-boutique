@@ -1,21 +1,21 @@
 <?php
-require_once "./helpers/helpers.php";
-class conexion extends helpers 
+require_once "../Helpers/helpers.php";
+class Conexion extends  Helpers
 {
-    public function conexion(){
+
+    public function conexion()
+    {
         $servidor = DB_HOST;
         $usuario = DB_USER;
         $password = DB_PASSWORD;
         $bd = DB_NAME;
-        $puerto =  DB_PORT;
+        $puerto = DB_PORT;
         $charset = DB_CHARSET;
-        $dns = "mysq:host=$servidor;port=$puerto;dbname=$bd;charset= $charset";
-        try{ 
-            $conexion = new PDO( $dns,$usuario,$password);
+        $dns = "mysql:host=$servidor;port=$puerto;dbname=$bd;charset=$charset";
+        try {
+            $conexion = new PDO($dns, $usuario, $password);
             return $conexion;
-        }catch (PDOException $e){
-
+        } catch (PDOException $e) {
         }
-
     }
 }
