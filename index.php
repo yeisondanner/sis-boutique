@@ -58,6 +58,20 @@ switch ($view) {
         require_once "./Views/App/customer/customer.php";
         require_once "./Views/Template/end.php";
         break;
+       case "sales":
+        $data["id"] = 5;
+        $data["title"] = "Gestion de ventas";
+        $data["description"] = "este modulo te permite gestionar las ventas";
+        $data["container"] = "sales";
+        $data["view"] = "sales";
+        $data["css"] = "sales";
+        $data["js"] = "sales";
+        require_once "./Views/template/start.php";
+        require_once "./Views/App/sales/sales.php";
+        require_once "./Views/template/end.php";
+        break;
+
          default:
         require_once "./Views/App/404/404.php";
+         break;
 }

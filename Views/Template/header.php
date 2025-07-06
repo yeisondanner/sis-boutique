@@ -12,3 +12,6 @@
 </head>
 
 <body>
+    <script>
+        const base_url = "<?= BASE_URL ?>";
+    </script>
