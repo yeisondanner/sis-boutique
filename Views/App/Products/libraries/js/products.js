@@ -32,6 +32,15 @@ function save() {
         fetch(url, config)
             .then(response => response.json())
             .then(data => {
+                if (!data.status) {
+                    alert(data.title);
+                    return false;
+                }
+                //limpio el formulario despues de haber echo el registro
+                formSave.reset();
+                //cerrar el modal abiert
+                $('#staticBackdrop').modal('hide');
+                alert(data.title);
                 console.log(data);
             })
             .catch(error => {
