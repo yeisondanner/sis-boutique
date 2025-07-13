@@ -92,7 +92,7 @@ class products extends Mysql
     public function select_product()
     {
         //creamos la consulta
-        $sql = "SELECT * FROM `tb_product`";
+        $sql = "SELECT * FROM `tb_product` ORDER BY `idProduct` DESC";
         //llamamos el metodo select_all de la clase Mysql
         $request = $this->select_all($sql);
         //retornamos el resultado

@@ -42,10 +42,12 @@ function save() {
                 formSave.reset();
                 table.ajax.reload(null, false);
                 idAlert.innerHTML = showAlert(data)
+                //cerramos el modal del modal
+                $('#modalSave').modal('hide');
                 console.log(data);
             })
             .catch(error => {
-                alert("Ocurrio un error al guardar los datos " + error.getText());
+                alert("Ocurrio un error al guardar los datos " + error);
             });
     });
 }
@@ -97,5 +99,70 @@ function loadTable() {
             { data: "p_photo" },
             { data: "actions" },
         ],
+        columnDefs: [
+            {
+                targets: 0,
+                className: "text-center",
+            },
+            {
+                targets: 1,
+                className: "text-left",
+            },
+            {
+                targets: 2,
+                className: "text-center",
+                render: function (data, type, row, meta) {
+                    //devolvemos las tallas en un badge de colores por tipo de talla
+                    if (data == "S") {
+                        return `<span class="badge bg-primary">${data}</span>`;
+                    } else if (data == "M") {
+                        return `<span class="badge bg-secondary">${data}</span>`;
+                    } else if (data == "L") {
+                        return `<span class="badge bg-success">${data}</span>`;
+                    } else if (data == "XL") {
+                        return `<span class="badge bg-danger">${data}</span>`;
+                    } else if (data == "XXL") {
+                        return `<span class="badge bg-warning">${data}</span>`;
+                    } else {
+                        return `<span class="badge bg-info">${data}</span>`;
+                    }
+                }
+            },
+            {
+                targets: 3,
+                className: "text-center",
+                render: function (data, type, row, meta) {
+                    //devolvemos un circulo con el color de la prenda ya que el campo devuelve el codigo del color
+                    return `<div 
+                                style="width: 25px; height:25px; border-radius: 50%; background-color: ${data}">
+                            </div>`;
+                }
+            },
+            {
+                targets: [4, 5],
+                className: "text-center",
+                render: function (data, type, row, meta) {
+                    return `S/. ${data}`;
+                }
+            },
+            {
+                targets: 8,
+                className: "text-center",
+                render: function (data, type, row, meta) {
+                    //cargamos la imagen de la prenda
+                    return `<img src="${data}" style="width: 50px; height: 50px;">`;
+                }
+            }
+        ],
+        dom: "lBfrtip",
+        language: {
+            url: "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json",
+        },
+        responsive: "true",
+        bProcessing: true,
+        destroy: true,
+        iDisplayLength: 10,
+        order: [[0, "asc"]],
+
     });
 }
