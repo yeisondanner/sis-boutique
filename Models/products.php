@@ -84,4 +84,18 @@ class products extends Mysql
         $request = $this->insert($sql, $arrValues);
         return $request;
     }
+    /**
+     * Creamos el metodo select_product
+     * que va a devolver los datos de la tabla tb_product
+     * @return array
+     */
+    public function select_product()
+    {
+        //creamos la consulta
+        $sql = "SELECT * FROM `tb_product`";
+        //llamamos el metodo select_all de la clase Mysql
+        $request = $this->select_all($sql);
+        //retornamos el resultado
+        return $request;
+    }
 }

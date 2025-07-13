@@ -12,6 +12,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+                <div id="idAlert"></div>
                 <form id="formSave">
                     <div class="form-group">
                         <label for="txtName">Nombre</label>
@@ -86,7 +87,7 @@
 </div>
 <!--Cargamos la tabla con datables-->
 <div class="container mt-5">
-    <table id="example" class="table table-striped">
+    <table id="table" class="table table-striped">
         <thead>
             <tr>
                 <th>#</th>
