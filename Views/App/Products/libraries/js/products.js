@@ -95,7 +95,7 @@ function loadTable() {
             { data: "p_stock" },
             { data: "p_brand" },
             { data: "p_photo" },
-            { data: "acctions" },
+            { data: "actions" },
         ],
     });
 }
