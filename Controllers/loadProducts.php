@@ -15,7 +15,7 @@ foreach ($request as $key => $value) {
             <button class="btn btn-warning">
                 <i class="fa fa-edit"></i>
             </button>
-            <button class="btn btn-danger">
+            <button class="btn btn-danger" onClick="deleteProduct(' . $value['idProduct'] . ')">
                 <i class="fa fa-trash"></i>
             </button>
         </div>';

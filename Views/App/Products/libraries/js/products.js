@@ -40,7 +40,7 @@ function save() {
                 }
                 //limpio el formulario despues de haber echo el registro
                 formSave.reset();
-                table.ajax.reload(null, false);
+                loadTable();
                 idAlert.innerHTML = showAlert(data)
                 //cerramos el modal del modal
                 $('#modalSave').modal('hide');
@@ -165,4 +165,32 @@ function loadTable() {
         order: [[0, "asc"]],
 
     });
+}
+/**
+ * metodo que encarga de eliminar un registro de la tabla
+ */
+function deleteProduct(id) {
+    //creamos la url de la peticion
+    const url = base_url + "/Controllers/deleteProducts.php?id=" + id;
+    //consultamos si el usuario esta seguro de eliminar el registro
+    if (confirm("¿Estás seguro de eliminar este registro?")) {
+        //si el usuario esta seguro de eliminar el registro
+        //enviamos la peticion al servidor
+        fetch(url)
+            .then((response) => response.json())
+            .then((data) => {
+                //si la respuesta del servidor es exitosa
+                if (data.status) {
+                    //mostramos el mensaje de alerta
+                    alert("Producto eliminado correctamente");
+                    //recargamos la tabla
+                    loadTable();
+                } else {
+                    //mostramos el mensaje de alerta
+                    alert("Error al eliminar el producto");
+
+                }
+            })
+            .catch((error) => console.error(error));
+    }
 }

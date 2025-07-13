@@ -98,4 +98,21 @@ class products extends Mysql
         //retornamos el resultado
         return $request;
     }
+    /** 
+     * Metodo que te permite eliminar un producto
+     * @param int $id
+     * @return array
+     */
+    public function delete_product(int $id)
+    {
+        //recogemos el id
+        $this->id = $id;
+        //creamos la consulta
+        $sql = "DELETE FROM `tb_product` WHERE  `idProduct`= ?";
+        //creamos el arrValues
+        $arrValues = array($this->id);
+        //llamamos el metodo delete de la clase Mysql
+        $request = $this->delete($sql, $arrValues);
+        return $request;
+    }
 }
