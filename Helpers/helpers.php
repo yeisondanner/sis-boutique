@@ -1,9 +1,9 @@
 <?php
-require_once "config/config.php";
+require_once "../Config/config.php";
 class Helpers
 {
     /**
-     * Metodo que devuelve la url base del proyecto
+     * Método que devuelve la url base del proyecto
      * @return string
      */
     public function base_url()

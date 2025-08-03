@@ -1,4 +1,5 @@
 <?php
+require_once "./Config/config.php";
 //validamos que exista la variable get view
 if (!isset($_GET["view"])) {
     $_GET["view"] = "login";
@@ -35,7 +36,7 @@ switch ($view) {
     case 'products':
         $data["id"] = 3;
         $data["title"] = "Gestion de productos";
-        $data["description"] = "Este modulo te permite gestionar los productos";
+        $data["description"] = "Gestion del sistema de boutique";
         $data["container"] = "Products";
         $data["view"] = "products";
         $data["css"] = "products";
@@ -44,19 +45,35 @@ switch ($view) {
         require_once "./Views/App/Products/products.php";
         require_once "./Views/Template/end.php";
         break;
-    case 'customers':
+    case 'customer':
         $data["id"] = 4;
         $data["title"] = "Gestion de Clientes";
-        $data["description"] = "Este modulo te permite gestionar los Clientes";
-        $data["container"] = "Customers";
-        $data["view"] = "customers";
-        $data["css"] = "customers";
-        $data["js"] = "customers";
+        $data["description"] = "Gestion del sistema de boutique";
+        $data["container"] = "Customer";
+        $data["view"] = "customer";
+        $data["css"] = "customer";
+        $data["js"] = "customer";
         require_once "./Views/Template/start.php";
-        require_once "./Views/App/Customers/customers.php";
+        require_once "./Views/App/Customer/customer.php";
+        require_once "./Views/Template/end.php";
+        break;
+    case 'sales':
+        $data["id"] = 5;
+        $data["title"] = "Gestion de Ventas";
+        $data["description"] = "Gestion del sistema de boutique";
+        $data["container"] = "Sales";
+        $data["view"] = "sales";
+        $data["css"] = "sales";
+        $data["js"] = "sales";
+        require_once "./Views/Template/start.php";
+        require_once "./Views/App/Sales/sales.php";
         require_once "./Views/Template/end.php";
         break;
     default:
+        $data["container"] = "404";
+        $data["view"] = "40";
+        $data["css"] = "404";
+        $data["js"] = "404";
         require_once "./Views/App/404/404.php";
         break;
 }

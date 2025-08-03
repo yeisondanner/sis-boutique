@@ -1,6 +1,6 @@
 <?php
-require_once "./Helpers/helpers.php";
-class conexion extends Helpers
+require_once "../Helpers/helpers.php";
+class Conexion extends  Helpers
 {
 
     public function conexion()
@@ -16,7 +16,6 @@ class conexion extends Helpers
             $conexion = new PDO($dns, $usuario, $password);
             return $conexion;
         } catch (PDOException $e) {
-
         }
     }
 }
