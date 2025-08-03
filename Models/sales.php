@@ -22,7 +22,8 @@ class sales extends mysql
                 tbp.p_brand,
                 tbdcp.dcp_quantity,
                 tbdcp.dcp_unitprice,
-                tbdcp.dcp_amount
+                tbdcp.dcp_amount,
+	            tbns.idnotesale
             FROM
                 tb_customer AS tbc
                 INNER JOIN tb_notesale AS tbns ON tbns.customer_id = tbc.idCustomer

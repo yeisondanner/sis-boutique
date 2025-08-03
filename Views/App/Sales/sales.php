@@ -23,7 +23,7 @@
                                 <div class="form-group">
                                     <label for="cliente">Cliente</label>
                                     <select class="form-control" id="cliente" name="cliente" required>
-                                        
+
                                     </select>
                                 </div>
 
@@ -194,14 +194,13 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>Nombre</th>
-                <th>Talla</th>
-                <th>Color</th>
-                <th>Precio compra</th>
-                <th>Precio Venta</th>
-                <th>Stock</th>
-                <th>Marca</th>
-                <th>Foto</th>
+                <th>Numero Venta</th>
+                <th>Cliente</th>
+                <th>DNI</th>
+                <th>Producto</th>
+                <th>Precio venta</th>
+                <th>Cantidad</th>
+                <th>Total</th>
                 <th>Acciones</th>
             </tr>
         </thead>
