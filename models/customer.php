@@ -2,23 +2,23 @@
 require_once "../Models/mysql.php";
 class customer extends Mysql
 {
-    //creamos el metodo constructor
+    //creamos el constructor
     public function __construct()
     {
-        //Obtenemos los metodos de la clase mysql
+        //obtenemos los metodos de la clase Mysql
         parent::__construct();
     }
     /**
-     * Selecciona todos los clientes
+     * Seleccion a tos los clientes
      * @return array
      */
-    public function select_customer() 
+    public function select_customer()
     {
-        //preparamos la consulta 
-        $sql = "SELECT * FROM tb_customer";
+        //preparamos la consulta
+        $sql = "SELECT*FROM tb_customer;";
         //ejecutamos la consulta
         $request = $this->select_all($sql);
-        //decolvemos la consulta 
+        //devolvemos el resultado
         return $request;
-    }   
-} 
+    }
+}

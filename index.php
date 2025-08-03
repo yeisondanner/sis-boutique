@@ -58,9 +58,9 @@ switch ($view) {
         require_once "./Views/Template/end.php";
         break;
     case 'sales':
-        $data["id"] = 5;
-        $data["title"] = "Gestion de Ventas";
-        $data["description"] = "Gestion del sistema de boutique";
+        $data["id"] = 4;
+        $data["title"] = "Ventas";
+        $data["description"] = "Gestion de ventas";
         $data["container"] = "Sales";
         $data["view"] = "sales";
         $data["css"] = "sales";

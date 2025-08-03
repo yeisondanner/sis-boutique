@@ -8,7 +8,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Registro de producto</h5>
+                <h5 class="modal-title" id="staticBackdropLabel">Registro de venta</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -18,13 +18,11 @@
                             <h4 class="mb-0">Formulario de Ventas</h4>
                         </div>
                         <div class="card-body">
-
                             <form id="formVenta">
-
                                 <!-- Cliente -->
                                 <div class="form-group">
                                     <label for="cliente">Cliente</label>
-                                    <select class="form-control" id="cliente" name="clientes" required>
+                                    <select class="form-control" id="cliente" name="cliente" required>
                                         
                                     </select>
                                 </div>
@@ -196,14 +194,13 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>Nombre</th>
-                <th>Talla</th>
-                <th>Color</th>
-                <th>Precio compra</th>
-                <th>Precio Venta</th>
-                <th>Stock</th>
-                <th>Marca</th>
-                <th>Foto</th>
+                <th>Numero de venta</th>
+                <th>Cliennte</th>
+                <th>Dni</th>
+                <th>Producto</th>
+                <th>Precio De Venta</th>
+                <th>Cantidad</th>
+                <th>Total</th>
                 <th>Acciones</th>
             </tr>
         </thead>
